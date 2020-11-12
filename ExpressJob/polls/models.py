@@ -16,3 +16,4 @@ class Usuario(models.Model):
     contrasenia = models.CharField(max_length=20)
     def __str__(self):
         return self.usuario_text
+

@@ -1,6 +1,9 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
+from .models import Persona
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    latest_persona_list = Persona.objects.order_by('nombre')
+    output = ', '.join([p.persona_text for p in latest_persona_list])
+    return HttpResponse(output)

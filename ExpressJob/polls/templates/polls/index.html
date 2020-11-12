@@ -1,0 +1,10 @@
+{% if latest_persona_list %}
+    <ul>
+    {% for persona in latest_persona_list %}
+        <li><a href="/polls/{{ persona.nombre }}/">{{ persona.persona_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
