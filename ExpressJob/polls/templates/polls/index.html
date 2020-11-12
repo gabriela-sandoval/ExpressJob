@@ -1,10 +1,21 @@
-{% if latest_persona_list %}
-    <ul>
-    {% for persona in latest_persona_list %}
-        <li><a href="/polls/{{ persona.nombre }}/">{{ persona.persona_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>ExpressJob</title>
+    <link rel="icon" href="{% static 'polls/images/fondo_principal}">
+</head>
+<body id="top">
+
+<div class="bgded overlay" style="background: aquamarine"></div>
+
+</body>
+
+
+
+
+
 
