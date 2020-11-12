@@ -8,12 +8,12 @@ class Persona(models.Model):
     telefono = models.CharField(max_length=10)
     direccion = models.CharField(max_length=100)
     def __str__(self):
-        return self.persona_text
+        return self.nombre
 
 class Usuario(models.Model):
     persona = models.ForeignKey(Persona, on_delete=models.CASCADE)
     nombre_usuario = models.CharField(max_length=30)
     contrasenia = models.CharField(max_length=20)
     def __str__(self):
-        return self.usuario_text
+        return self.nombre_usuario
 

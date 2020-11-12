@@ -5,5 +5,5 @@ from .models import Persona
 
 def index(request):
     latest_persona_list = Persona.objects.order_by('nombre')
-    output = ', '.join([p.persona_text for p in latest_persona_list])
+    output = ', '.join([p.nombre for p in latest_persona_list])
     return HttpResponse(output)
