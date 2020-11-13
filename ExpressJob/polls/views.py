@@ -12,4 +12,5 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 def login(request):
-    return render(request, "/login.html")
+    template = loader.get_template('polls/login.html')
+    return template.render(request)
