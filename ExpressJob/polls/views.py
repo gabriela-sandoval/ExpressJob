@@ -11,5 +11,5 @@ def index(request):
         'latest_persona_list': latest_persona_list,
     }
     return HttpResponse(template.render(context, request))
-def login(request)
+def login(request):
     return render(request, "/login.html")
